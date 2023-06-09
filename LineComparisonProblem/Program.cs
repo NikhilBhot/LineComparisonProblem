@@ -6,8 +6,8 @@
         {
             Console.WriteLine(" Wel- Come To Line Comparison Problem");
 
-            // Create a line with two points
-            Line line = new Line
+            // Create two lines with different points
+            Line line1 = new Line
             {
                 X1 = 1,
                 Y1 = 2,
@@ -15,9 +15,17 @@
                 Y2 = 6
             };
 
-            // Calculate and print the length of the line
-            double length = line.CalculateLength();
-            Console.WriteLine("Length of the line: " + length);
+            Line line2 = new Line
+            {
+                X1 = 4,
+                Y1 = 6,
+                X2 = 1,
+                Y2 = 2
+            };
+
+            // Check if the lines are equal
+            bool areEqual = line1.Equals(line2);
+            Console.WriteLine("Are the lines equal? " + areEqual);
         }
     }
 }

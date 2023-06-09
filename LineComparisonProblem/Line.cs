@@ -13,12 +13,13 @@ namespace LineComparisonProblem
         public double X2 { get; set; }
         public double Y2 { get; set; }
 
-        public double CalculateLength()
+        public bool Equals(Line other)
         {
-            double deltaX = X2 - X1;
-            double deltaY = Y2 - Y1;
-            double length = Math.Sqrt(Math.Pow(deltaX, 2) + Math.Pow(deltaY, 2));
-            return length;
+            if (other == null)
+                return false;
+
+            return (X1 == other.X1 && Y1 == other.Y1 && X2 == other.X2 && Y2 == other.Y2)
+                || (X1 == other.X2 && Y1 == other.Y2 && X2 == other.X1 && Y2 == other.Y1);
         }
     }
 }
