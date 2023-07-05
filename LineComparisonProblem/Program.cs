@@ -26,6 +26,16 @@
             // Check if the lines are equal
             bool areEqual = line1.Equals(line2);
             Console.WriteLine("Are the lines equal? " + areEqual);
+
+            // Compare the lines
+            int comparison = line1.CompareTo(line2);
+
+            if (comparison < 0)
+                Console.WriteLine("Line 1 is less than Line 2");
+            else if (comparison > 0)
+                Console.WriteLine("Line 1 is greater than Line 2");
+            else
+                Console.WriteLine("Line 1 is equal to Line 2");
         }
     }
 }
